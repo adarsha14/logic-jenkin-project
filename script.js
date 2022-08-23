@@ -9,6 +9,3 @@ open_btn.addEventListener('click', () => {
 close_btn.addEventListener('click', () => {
     nav.forEach(nav_el => nav_el.classList.remove('visible'))
 })
-Footer
-© 2022 GitHub, Inc.
-Footer navigation
