@@ -1,17 +1,14 @@
-const boxesContainer = document.getElementById('boxes')
-const btn = document.getElementById('btn')
+const open_btn = document.querySelector('.open-btn')
+const close_btn = document.querySelector('.close-btn')
+const nav = document.querySelectorAll('.nav')
 
-btn.addEventListener('click', () => boxesContainer.classList.toggle('big'))
+open_btn.addEventListener('click', () => {
+    nav.forEach(nav_el => nav_el.classList.add('visible'))
+})
 
-function createBoxes() {
-  for (let i = 0; i < 4; i++) {
-    for (let j = 0; j < 4; j++) {
-      const box = document.createElement('div')
-      box.classList.add('box')
-      box.style.backgroundPosition = `${-j * 125}px ${-i * 125}px`
-      boxesContainer.appendChild(box)
-    }
-  }
-}
-
-createBoxes()
+close_btn.addEventListener('click', () => {
+    nav.forEach(nav_el => nav_el.classList.remove('visible'))
+})
+Footer
+© 2022 GitHub, Inc.
+Footer navigation
